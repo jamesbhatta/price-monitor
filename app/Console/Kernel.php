@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
         $schedule->call(fn() => logger('Running...'))->everyTenSeconds();
-        // $schedule->job(new FetchProductsPrice)->everyMinute();
+        $schedule->job(new FetchProductsPrice)->everyMinute();
     }
 
     /**
